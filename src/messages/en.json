@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
-    "about": "About",
+    "whoWeAre": "About us",
     "contact": "Contact",
     "cta": "Request a quote"
   },
@@ -13,8 +13,8 @@
     "mainNav": "Main navigation",
     "mobileNav": "Mobile navigation",
     "megaMenu": {
-      "col1Title": "Financial expertise",
-      "col2Title": "Advisory & Development",
+      "col1Title": "Finance & Tax",
+      "col2Title": "Administration & Real Estate",
       "featuredTitle": "All our services",
       "featuredDesc": "Comprehensive support for every aspect of your business.",
       "featuredCta": "View services"
@@ -24,7 +24,7 @@
     "overline": "Fiduciary & Business Advisory",
     "baseline": "Your trusted partner for management, taxation and the growth of your business in French-speaking Switzerland.",
     "ctaSecondary": "Discover our services",
-    "scroll": "Explore"
+    "scroll": ""
   },
   "features": {
     "overline": "Why choose us",
@@ -51,45 +51,90 @@
     "titleAccent": "of expertise",
     "subtitle": "Comprehensive support for every stage of your business journey.",
     "cta": "View all our services",
+    "discoverCta": "Discover",
     "pageOverline": "Our services",
     "pageTitle1": "Our",
     "pageTitle2": "Services",
-    "pageSubtitle": "Tailor-made support for every financial, tax and administrative aspect of your business.",
+    "pageSubtitle": "Four complementary areas of expertise to cover all your administrative, tax and real estate needs.",
     "promiseOverline": "Our promise",
     "promiseTitle": "A human-sized firm, top-level expertise",
     "promiseText": "At SRD Partners, we believe every entrepreneur deserves a fiduciary partner fully committed at their side — not just a service provider. Our teams combine technical expertise and availability to offer you personalized, responsive and confidential support.",
     "promiseCta1": "Get in touch",
-    "promiseCta2": "Meet the team",
+    "promiseCta2": "About us",
+    "chargeTitle": "What we handle",
+    "forWhoTitle": "Who is it for?",
     "items": [
       {
         "title": "Accounting & Tax",
-        "shortDesc": "Bookkeeping, annual closing and tax optimization.",
-        "longDesc": "We handle your entire accounting: document entry, bank reconciliations, annual financial statements, VAT returns and tax burden optimization. Our experts ensure full compliance with Swiss legal and tax requirements."
+        "shortDesc": "Bookkeeping, VAT returns and tax optimization.",
+        "heroTitle1": "Accounting",
+        "heroTitle2": "& Tax",
+        "heroIntro": "Entrust us with your accounting and focus on your core business. We ensure the compliance of your accounts and the optimization of your tax burden, with complete discretion.",
+        "bullets": [
+          "Day-to-day bookkeeping",
+          "Annual financial statements and balance sheets",
+          "VAT, income tax and corporate tax filings"
+        ],
+        "forWho": [
+          "SMEs and freelancers looking to outsource their accounting",
+          "Growing companies needing structured monitoring",
+          "Start-ups seeking to comply with Swiss legal requirements",
+          "Entrepreneurs wishing to optimize their tax burden"
+        ]
       },
       {
-        "title": "Management consulting",
-        "shortDesc": "Financial steering, dashboards and business strategy.",
-        "longDesc": "We support business leaders in strategic decisions: financial analysis, implementation of custom dashboards, budget planning, business valuation and growth advisory. Turn your financial data into real growth levers."
+        "title": "Human Resources",
+        "shortDesc": "Payslips, social declarations and HR advisory.",
+        "heroTitle1": "Human",
+        "heroTitle2": "Resources",
+        "heroIntro": "Managing staff requires rigor and knowledge of Swiss social obligations. We handle your HR processes so you can focus entirely on your business.",
+        "bullets": [
+          "Payslip preparation",
+          "Social declarations (AHV, BVG, UVG…)",
+          "Personnel management advisory"
+        ],
+        "forWho": [
+          "Companies employing staff in Switzerland",
+          "Employers dealing with social obligations",
+          "Managers looking to delegate payroll processing",
+          "Expanding companies hiring new employees"
+        ]
       },
       {
-        "title": "Audit & Review",
-        "shortDesc": "Account review, limited review and restricted audit.",
-        "longDesc": "Our audit services provide an independent and rigorous view of your financial statements. We perform limited reviews and restricted audits in accordance with Swiss auditing standards, ensuring transparency and credibility with your financial and institutional partners."
+        "title": "Administrative management",
+        "shortDesc": "Invoicing, debtor/creditor tracking and company domiciliation.",
+        "heroTitle1": "Administrative",
+        "heroTitle2": "management",
+        "heroIntro": "Sound administration is the foundation of a worry-free business. We manage your daily administrative flows with rigor so nothing is left to chance.",
+        "bullets": [
+          "Invoicing and payment management",
+          "Debtor and creditor monitoring",
+          "Company domiciliation and mail forwarding"
+        ],
+        "forWho": [
+          "Freelancers and small structures lacking internal resources",
+          "Companies wishing to outsource their back-office",
+          "Newly incorporated companies needing a professional address",
+          "Groups requiring rigorous management of their financial flows"
+        ]
       },
       {
-        "title": "Wealth planning",
-        "shortDesc": "Wealth structuring, succession and pension planning.",
-        "longDesc": "Plan ahead with peace of mind. We advise you on structuring your private and professional assets, succession planning, optimizing your pension arrangements (2nd and 3rd pillar) and protecting your family and assets over the long term."
-      },
-      {
-        "title": "Company formation",
-        "shortDesc": "End-to-end support from idea to registration.",
-        "longDesc": "Bring your entrepreneurial project to life with our experts. Choosing the right legal form, drafting articles, registration with the Commercial Register, bank account opening and setting up administrative and accounting processes: we manage every step with you."
-      },
-      {
-        "title": "HR & Payroll",
-        "shortDesc": "Payroll, social insurance and labor law support.",
-        "longDesc": "Outsource your personnel administration to our HR specialists. Payroll processing, social insurance declarations (AHV/AVS, LPP, LAA), employment contracts, absence and leave tracking, and continuous regulatory monitoring: we free you from administrative constraints."
+        "title": "Real Estate Management",
+        "shortDesc": "Rental management, financial monitoring and legal support.",
+        "heroTitle1": "Real Estate",
+        "heroTitle2": "Management",
+        "heroIntro": "Whether you are an owner or investor, entrust the management of your real estate assets to our specialists. We ensure the profitability and compliance of your properties with professionalism.",
+        "bullets": [
+          "Rental management",
+          "Administrative and financial management",
+          "Legal support"
+        ],
+        "forWho": [
+          "Property owners looking to delegate property management",
+          "Real estate investors seeking professional monitoring",
+          "Property companies needing an external manager",
+          "Individuals managing a rental portfolio in Switzerland"
+        ]
       }
     ]
   },
@@ -128,6 +173,8 @@
   "testimonials": {
     "overline": "They trust us",
     "title": "What our clients say",
+    "titleMain": "What our clients",
+    "titleAccent": "say",
     "items": [
       {
         "quote": "SRD Partners transformed our financial approach. Thanks to their sharp expertise, we significantly optimized our tax burden while gaining clearer visibility into our performance.",
@@ -179,13 +226,13 @@
   },
   "about": {
     "overline": "The firm",
-    "title1": "About",
-    "title2": "us",
+    "title1": "Who",
+    "title2": "we are",
     "subtitle": "Founded by passionate professionals from French-speaking Switzerland, SRD Partners is much more than a fiduciary firm: it is a long-term committed partner.",
     "missionOverline": "Our mission",
-    "missionTitle": "Free entrepreneurs from administrative complexity",
+    "missionTitle": "Guiding entrepreneurs with rigour",
     "missionP1": "At SRD Partners, our mission is simple: help you focus on your core business while we look after the financial, tax and administrative health of your company.",
-    "missionP2": "Founded more than 15 years ago in Geneva, our firm supports SMEs, start-ups, independent professionals and families throughout French-speaking Switzerland. Our approach combines top-level technical expertise with a strong human relationship.",
+    "missionP2": "Based in Corcelles NE, our firm supports SMEs, independent professionals and families throughout French-speaking Switzerland. Our approach combines top-level technical expertise with a strong human relationship.",
     "missionP3": "We are not just service providers: we are your partners, present at every key stage of your business life.",
     "missionCta": "Book an appointment",
     "stats": {
@@ -221,33 +268,23 @@
     "subtitle": "Seasoned professionals, committed to their work and to the client relationship.",
     "members": [
       {
-        "name": "Sophie Reinhart",
-        "role": "Founding Partner – Certified Accountant",
-        "bio": "Graduated in business economics, Sophie leads the firm with 18 years of experience in audit and financial advisory for SMEs in French-speaking Switzerland.",
-        "initials": "SR"
+        "name": "Cremilde Hirschi",
+        "role": "Administration · Finance · HR",
+        "bio": "Main point of contact for the firm, Cremilde coordinates all client files with rigor and availability.",
+        "initials": "CH",
+        "quote": "I personally commit to supporting every client with rigour and full availability."
       },
       {
-        "name": "David Marchand",
-        "role": "Partner – Tax & Legal Advisory",
-        "bio": "Law graduate and certified tax expert, David supports clients in optimizing their tax structure and in business succession projects.",
-        "initials": "DM"
-      },
-      {
-        "name": "Isabelle Chopard",
-        "role": "Head of Accounting",
-        "bio": "With over 10 years of experience, Isabelle ensures the accuracy and compliance of our clients' financial statements with a constant attention to detail.",
-        "initials": "IC"
-      },
-      {
-        "name": "Raphaël Torres",
-        "role": "HR & Payroll Consultant",
-        "bio": "An HR specialist, Raphaël manages personnel files and ensures our clients' social compliance with rigor and discretion.",
-        "initials": "RT"
+        "name": "To be confirmed",
+        "role": "Accounting & Tax",
+        "bio": "Specialist in bookkeeping and tax filings for SMEs and freelancers in French-speaking Switzerland.",
+        "initials": "–",
+        "quote": ""
       }
     ]
   },
   "contact": {
-    "overline": "Let’s stay in touch",
+    "overline": "Let's stay in touch",
     "title1": "Contact",
     "title2": "us",
     "subtitle": "Our team is available Monday to Friday. We commit to replying within 24 business hours.",
@@ -256,13 +293,13 @@
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "mainOfficeLabel": "Head office",
-    "lausanneOfficeLabel": "Lausanne office",
     "hours": "Mon–Fri: 8:00–18:00",
     "country": "Switzerland",
     "form": {
       "overline": "Contact",
-      "title": "Let’s talk about your project",
+      "title": "Let's talk about your project",
       "subtitle": "Fill out the form below and we will get back to you within 24 business hours.",
+      "trustLine": "Reply within 24 business hours · Confidentiality guaranteed",
       "fullName": "Full name *",
       "company": "Company",
       "email": "Email address *",
@@ -301,27 +338,71 @@
       }
     }
   },
+  "activity": {
+    "overline": "Areas of Expertise",
+    "title": "Our expertise at the heart of your growth",
+    "description": "From financial audit to administrative management, we cover all your company's fiduciary needs with rigour and confidentiality.",
+    "items": {
+      "revision": {
+        "title": "Audit & Review",
+        "description": "Independent and rigorous review of your financial statements in line with Swiss audit standards."
+      },
+      "payroll": {
+        "title": "Payroll & HR",
+        "description": "Payslip processing, social declarations and employment contract management."
+      },
+      "tax": {
+        "title": "Taxation",
+        "description": "Optimisation of your tax burden and compliance with Swiss tax legislation."
+      },
+      "administration": {
+        "title": "Administration",
+        "description": "Legal secretarial services, company domiciliation and complete administrative management."
+      }
+    }
+  },
+  "cta": {
+    "overline": "Let's get started",
+    "titleMain": "Let's talk about",
+    "titleAccent": "your business.",
+    "subtitle": "First consultation at no obligation. Response guaranteed within 24 business hours.",
+    "button": "Get in touch"
+  },
+  "imageBreak": {
+    "tagline": "Fiduciary excellence, serving your ambition."
+  },
   "footer": {
     "navigation": "Navigation",
     "services": "Services",
     "contact": "Contact",
-    "tagline": "Geneva • Lausanne • Switzerland",
-    "rights": "All rights reserved."
+    "tagline": "Corcelles NE • Switzerland",
+    "rights": "All rights reserved.",
+    "signature": "Independent fiduciary firm · French-speaking Switzerland"
   },
   "meta": {
-    "homeTitle": "SRD Partners Ltd – Fiduciary & Business Advisory in Geneva",
-    "homeDescription": "Fiduciary firm in Geneva and Lausanne: accounting, taxation, audit, management consulting and company formation. SRD Partners supports SMEs in French-speaking Switzerland.",
-    "servicesTitle": "Our Services – SRD Partners Ltd",
-    "servicesDescription": "Discover all our fiduciary services: accounting, taxation, audit, wealth planning, company formation and HR & payroll management.",
-    "aboutTitle": "About – SRD Partners Ltd",
-    "aboutDescription": "Meet the team and values of SRD Partners, your trusted fiduciary firm in French-speaking Switzerland for over 15 years.",
-    "contactTitle": "Contact – SRD Partners Ltd",
-    "contactDescription": "Contact SRD Partners for all your fiduciary needs. Our team is available in Geneva and Lausanne Monday to Friday.",
+    "homeTitle": "SRD Partners Sàrl – Fiduciary & Business Advisory in French-speaking Switzerland",
+    "homeDescription": "Fiduciary firm in Corcelles NE: accounting, taxation, HR, administrative and real estate management. SRD Partners supports SMEs in French-speaking Switzerland.",
+    "servicesTitle": "Our Services – SRD Partners Sàrl",
+    "servicesDescription": "Discover our four areas of expertise: accounting & tax, human resources, administrative management and real estate management.",
+    "comptaTitle": "Accounting & Tax – SRD Partners Sàrl",
+    "comptaDescription": "Bookkeeping, annual accounts and tax filings. SRD Partners handles your accounting with rigor and confidentiality.",
+    "rhTitle": "Human Resources – SRD Partners Sàrl",
+    "rhDescription": "Payslips, social declarations and HR advisory. SRD Partners handles your employer obligations in Switzerland.",
+    "adminTitle": "Administrative Management – SRD Partners Sàrl",
+    "adminDescription": "Invoicing, debtor/creditor tracking and company domiciliation. Outsource your administration with SRD Partners.",
+    "immoTitle": "Real Estate Management – SRD Partners Sàrl",
+    "immoDescription": "Rental management, financial monitoring and legal support for property owners and investors in Switzerland.",
+    "whoWeAreTitle": "About us – SRD Partners Sàrl",
+    "whoWeAreDescription": "Discover the team and values of SRD Partners, your trusted fiduciary firm in French-speaking Switzerland.",
+    "aboutTitle": "About us – SRD Partners Sàrl",
+    "aboutDescription": "Discover the team and values of SRD Partners, your trusted fiduciary firm in French-speaking Switzerland.",
+    "contactTitle": "Contact – SRD Partners Sàrl",
+    "contactDescription": "Contact SRD Partners for all your fiduciary needs. Our team is available Monday to Friday.",
     "titleTemplate": "%s | SRD Partners"
   },
   "brand": {
     "name": "SRD Partners",
-    "legal": "SRD Partners Ltd",
+    "legal": "SRD Partners Sàrl",
     "baseline": "Your trusted partner for management, taxation and the growth of your business in French-speaking Switzerland."
   }
 }

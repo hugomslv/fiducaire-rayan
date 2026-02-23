@@ -1,6 +1,6 @@
 // Indices des services dans services[] (siteData.ts) pour chaque colonne du mega-menu
-// services = [comptabilite(0), conseil(1), audit(2), patrimoine(3), creation(4), rh(5)]
+// services = [comptabilite-fiscalite(0), ressources-humaines(1), gestion-administrative(2), gestion-immobiliere(3)]
 export const MEGA_COL_INDICES: number[][] = [
-  [0, 2, 3], // Col 1 : Comptabilité, Audit, Patrimoine
-  [1, 4, 5], // Col 2 : Conseil, Création, RH
+  [0, 1], // Col 1 : Comptabilité & Fiscalité, Ressources Humaines
+  [2, 3], // Col 2 : Gestion administrative, Gestion Immobilière
 ]

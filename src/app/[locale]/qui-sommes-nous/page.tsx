@@ -17,13 +17,13 @@ export async function generateMetadata({
   const { locale } = await params
   const t = getMessages(isValidLocale(locale) ? locale : defaultLocale)
   return {
-    title: t.meta.aboutTitle,
-    description: t.meta.aboutDescription,
-    openGraph: { title: t.meta.aboutTitle, description: t.meta.aboutDescription },
+    title: t.meta.whoWeAreTitle,
+    description: t.meta.whoWeAreDescription,
+    openGraph: { title: t.meta.whoWeAreTitle, description: t.meta.whoWeAreDescription },
   }
 }
 
-export default async function AProposPage({
+export default async function QuiSommesNousPage({
   params,
 }: {
   params: Promise<{ locale: string }>
@@ -40,15 +40,15 @@ export default async function AProposPage({
   ]
 
   const stats = [
-    { value: '15+',  label: t.about.stats.years   },
-    { value: '200+', label: t.about.stats.clients  },
-    { value: '4',    label: t.about.stats.experts  },
-    { value: '2',    label: t.about.stats.offices  },
+    { value: '15+', label: t.about.stats.years   },
+    { value: '200+', label: t.about.stats.clients },
+    { value: '4',   label: t.about.stats.experts  },
+    { value: '2',   label: t.about.stats.offices  },
   ]
 
   return (
     <>
-      {/* ── Hero page ──────────────────────── */}
+      {/* ── Hero ───────────────────────────── */}
       <section className="relative bg-navy overflow-hidden pt-36 pb-20 sm:pt-48 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]" aria-hidden="true">
           <div
@@ -80,71 +80,70 @@ export default async function AProposPage({
         </div>
       </section>
 
-      {/* ── Mission & Stats ───────────────── */}
+      {/* ── Mission & Stats ────────────────── */}
       <Section bg="cream" slant="right" slantFill={BG.navy}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="section-label">{t.about.missionOverline}</span>
-            <h2 className="section-title mb-6">{t.about.missionTitle}</h2>
-            <div className="space-y-4">
-              <p className="font-body text-muted leading-relaxed">{t.about.missionP1}</p>
-              <p className="font-body text-muted leading-relaxed">{t.about.missionP2}</p>
-              <p className="font-body text-muted leading-relaxed">{t.about.missionP3}</p>
-            </div>
-            <div className="mt-8">
-              <Link href={`/${validLocale}/contact`} className="btn-primary">
-                {t.about.missionCta}
-                <Icon name="arrow" size={16} strokeWidth={2} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white rounded-lg border border-black/[0.06] shadow-card p-8 text-center"
-              >
-                <p className="font-display text-4xl sm:text-5xl font-semibold text-navy mb-2">
-                  {stat.value}
-                </p>
-                <p className="font-body text-xs text-muted tracking-wide">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-2xl">
+          <span className="section-label">{t.about.missionOverline}</span>
+          <h2 className="section-title mb-6">{t.about.missionTitle}</h2>
+          <p className="font-body text-muted leading-relaxed">{t.about.missionP1}</p>
+          <Link
+            href={`/${validLocale}/contact`}
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold text-navy hover:text-primary-600 transition-colors mt-8 group"
+          >
+            {t.about.missionCta}
+            <Icon name="arrow" size={14} strokeWidth={2} />
+          </Link>
         </div>
-      </Section>
 
-      {/* ── Valeurs ──────────────────────────── */}
-      <Section bg="stone" slant="left" slantFill={BG.cream}>
-        <div className="text-center mb-12">
-          <span className="section-label">{t.about.valuesOverline}</span>
-          <h2 className="section-title">{t.about.valuesTitle}</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {t.about.values.map((v, i) => (
-            <div
-              key={v.title}
-              className={`bg-white rounded-lg border border-black/[0.06] shadow-card p-7 animate-fade-up delay-${(i + 1) * 100}`}
-            >
-              <p className="font-display text-5xl font-light text-gold/20 mb-4 leading-none">
-                0{i + 1}
+        {/* Bande de stats — sans carte, sans ombre, sans fond */}
+        <div className="mt-16 pt-10 border-t border-black/[0.07] grid grid-cols-4 divide-x divide-black/[0.07]">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center py-6">
+              <p className="font-display text-[2rem] sm:text-5xl font-semibold text-navy leading-none mb-2">
+                {stat.value}
               </p>
-              <h3 className="font-body text-xl font-semibold text-navy mb-3">{v.title}</h3>
-              <p className="font-body text-sm text-muted leading-relaxed">{v.description}</p>
+              <p className="font-body text-[10px] sm:text-xs text-muted tracking-wide">{stat.label}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* ── Équipe ───────────────────────────── */}
-      <Section bg="cream" slant="right" slantFill={BG.stone}>
+      {/* ── Valeurs ────────────────────────── */}
+      <Section bg="stone" slant="left" slantFill={BG.cream}>
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="section-label">{t.about.valuesOverline}</span>
+          <h2 className="section-title">{t.about.valuesTitle}</h2>
+        </div>
+
+        <div className="max-w-2xl mx-auto">
+          {t.about.values.map((v, i) => (
+            <div key={v.title} className="pb-12 sm:pb-14 last:pb-0">
+
+              {/* Numéro en cercle violet */}
+              <div className="w-9 h-9 rounded-full bg-primary-500 text-white flex items-center justify-center font-body font-semibold text-sm mb-5 select-none">
+                0{i + 1}
+              </div>
+
+              <h3 className="font-display text-[1.625rem] sm:text-3xl font-light text-navy mb-4 leading-[1.2]">
+                {v.title}
+              </h3>
+              <p className="font-body text-[0.9375rem] text-muted leading-[1.82] max-w-md">
+                {v.description}
+              </p>
+
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── Équipe ─────────────────────────── */}
+      <Section bg="mineral" slant="right" slantFill={BG.stone}>
         <div className="text-center mb-12">
           <span className="section-label">{t.team.overline}</span>
           <h2 className="section-title">{t.team.title}</h2>
           <p className="section-subtitle mx-auto text-center mt-4">{t.team.subtitle}</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {t.team.members.map((member, i) => (
             <div key={member.name} className={`animate-fade-up delay-${(i + 1) * 100}`}>
               <TeamCard
@@ -152,16 +151,17 @@ export default async function AProposPage({
                 role={member.role}
                 bio={member.bio}
                 initials={member.initials}
+                quote={member.quote}
               />
             </div>
           ))}
         </div>
       </Section>
 
-      {/* ── Contact ──────────────────────────── */}
-      <ContactBlock bg="stone" slant="left" slantFill={BG.cream} t={t.contact.form} />
+      {/* ── Contact ────────────────────────── */}
+      <ContactBlock bg="stone" slant="left" slantFill={BG.mineral} t={t.contact.form} />
 
-      {/* ── Footer ───────────────────────────── */}
+      {/* ── Footer ─────────────────────────── */}
       <Footer locale={validLocale} t={t} navItems={navItems} />
     </>
   )

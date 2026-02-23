@@ -36,12 +36,14 @@ const config: Config = {
       // ─────────────────────────────────────────
       colors: {
         // Fonds de sections (cool, pas de tons chauds)
-        cream: '#F8F9FC',
-        stone: '#EEF0F7',
+        cream:    '#F8F9FC',
+        stone:    '#D2C9D6',
+        // Fond minéral — lavande grise subtile, sections premium
+        mineral:  '#D2C9D6',
 
         // Fond sombre — violet nuit profond (du logo)
         navy: {
-          DEFAULT: '#1A1028',
+          DEFAULT: '#792A82',
           800:     '#221438',
           700:     '#2D1A4A',
         },
@@ -49,7 +51,7 @@ const config: Config = {
         // Alias sémantique accent/crimson → utilisé pour CTA, overlines, séparateurs
         // (préserve les classes bg-gold, text-gold, etc. déjà en place)
         gold: {
-          DEFAULT: '#C21245',
+          DEFAULT: '#97144F',
           light:   '#E84272',
           pale:    '#FFF0F4',
           dark:    '#A00E3A',
@@ -63,17 +65,17 @@ const config: Config = {
 
         // ── Échelle primaire complète (violet logo SRD)
         primary: {
-          50:  '#F6EFFE',
-          100: '#EBDFFC',
-          200: '#D5BEF9',
-          300: '#B68BF3',
-          400: '#9557E8',
-          500: '#7B2FB5',
-          600: '#6926A0',
-          700: '#561E85',
-          800: '#43176A',
-          900: '#31104F',
-          950: '#1F0932',
+          50:  '#F8F5F9',
+          100: '#F1EBF2',
+          200: '#E2D7E6',
+          300: '#CDB9D3',
+          400: '#B091B9',
+          500: '#792A82', // rgb(121, 42, 130)
+          600: '#653273',
+          700: '#542960',
+          800: '#43214D',
+          900: '#32193A',
+          950: '#221126',
         },
 
         // ── Échelle accent complète (crimson arrow du logo)
@@ -84,7 +86,7 @@ const config: Config = {
           300: '#FF95BB',
           400: '#FF5A8F',
           500: '#E01855',
-          600: '#C21245',
+          600: '#97144F',
           700: '#A00E3A',
           800: '#81092F',
           900: '#620624',
@@ -94,7 +96,7 @@ const config: Config = {
         // ── Nuancier gris cool (zéro ton chaud/beige)
         gray: {
           50:  '#F8F9FC',
-          100: '#EEF0F7',
+          100: '#D2C9D6',
           200: '#DDE1ED',
           300: '#C4CAD9',
           400: '#9BA4BB',
@@ -114,7 +116,7 @@ const config: Config = {
         card: '0 1px 3px rgba(26,10,40,0.06), 0 4px 16px rgba(26,10,40,0.06)',
         'card-hover': '0 8px 32px rgba(26,10,40,0.14)',
         // Ombre teintée crimson pour les CTA
-        gold: '0 4px 20px rgba(194,18,69,0.30)',
+        gold: '0 4px 20px rgb(151, 20, 79,0.30)',
         // Ombres multicouches premium (légèrement violet-tintées)
         premium: [
           '0 0 0 1px rgba(26,10,40,0.05)',
@@ -139,3 +141,6 @@ const config: Config = {
 }
 
 export default config
+
+
+

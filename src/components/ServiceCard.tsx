@@ -23,14 +23,14 @@ export function ServiceCard({
     <article
       className={cn(
         // Structure
-        'group relative flex flex-col bg-white rounded-[28px]',
+        'group relative flex flex-col bg-white rounded-2xl',
         // Spacing
-        long ? 'p-10 sm:p-12 gap-7' : 'p-9 sm:p-10 gap-6',
-        // Shadow multicouche — diffuse et profonde
-        'shadow-premium',
-        // Hover — translateY -6px + shadow plus profonde
+        long ? 'p-10 sm:p-12 gap-7' : 'p-9 sm:p-11 gap-6',
+        // Border + shadow
+        'border border-black/[0.04] shadow-premium',
+        // Hover
         'transition-all duration-300 ease-out',
-        'hover:-translate-y-1.5 hover:shadow-premium-hover',
+        'hover:-translate-y-1.5 hover:shadow-premium-hover hover:border-black/[0.07]',
       )}
     >
       {/* Badge numéroté — discret, haut de gamme */}

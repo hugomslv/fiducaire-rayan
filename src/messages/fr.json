@@ -2,7 +2,7 @@
   "nav": {
     "home": "Accueil",
     "services": "Services",
-    "about": "À propos",
+    "whoWeAre": "Qui sommes-nous",
     "contact": "Contact",
     "cta": "Demander une offre"
   },
@@ -13,8 +13,8 @@
     "mainNav": "Navigation principale",
     "mobileNav": "Navigation mobile",
     "megaMenu": {
-      "col1Title": "Expertise financière",
-      "col2Title": "Conseil & Développement",
+      "col1Title": "Finances & Fiscalité",
+      "col2Title": "Administration & Immobilier",
       "featuredTitle": "Tous nos services",
       "featuredDesc": "Un accompagnement complet pour chaque dimension de votre entreprise.",
       "featuredCta": "Voir les services"
@@ -24,7 +24,7 @@
     "overline": "Fiduciaire & Conseil d'entreprise",
     "baseline": "Votre partenaire de confiance pour la gestion, la fiscalité et la croissance de votre entreprise en Romandie.",
     "ctaSecondary": "Découvrir nos services",
-    "scroll": "Découvrir"
+    "scroll": ""
   },
   "features": {
     "overline": "Pourquoi nous choisir",
@@ -51,45 +51,90 @@
     "titleAccent": "d'expertise",
     "subtitle": "Un accompagnement complet pour toutes les étapes de la vie de votre entreprise.",
     "cta": "Voir tous nos services",
+    "discoverCta": "Découvrir",
     "pageOverline": "Nos prestations",
     "pageTitle1": "Nos",
     "pageTitle2": "Services",
-    "pageSubtitle": "Un accompagnement sur-mesure pour chaque dimension financière, fiscale et administrative de votre entreprise.",
+    "pageSubtitle": "Quatre domaines d'expertise complémentaires pour couvrir l'ensemble de vos besoins administratifs, fiscaux et immobiliers.",
     "promiseOverline": "Notre promesse",
     "promiseTitle": "Un cabinet à taille humaine, une expertise de haut niveau",
     "promiseText": "Chez SRD Partners, nous croyons que chaque entrepreneur mérite un partenaire fiduciaire pleinement engagé à ses côtés — pas seulement un prestataire de services. Nos équipes combinent expertise technique et disponibilité pour vous offrir un accompagnement personnalisé, réactif et confidentiel.",
     "promiseCta1": "Prendre contact",
-    "promiseCta2": "Découvrir l'équipe",
+    "promiseCta2": "Qui sommes-nous",
+    "chargeTitle": "Ce que nous prenons en charge",
+    "forWhoTitle": "Pour qui ?",
     "items": [
       {
         "title": "Comptabilité & Fiscalité",
-        "shortDesc": "Tenue des comptes, bouclement annuel et optimisation fiscale.",
-        "longDesc": "Nous prenons en charge l'ensemble de votre comptabilité : saisie des pièces, réconciliations bancaires, bouclement des comptes annuels, déclarations TVA et optimisation de votre charge fiscale. Nos experts assurent la conformité totale de votre entreprise avec les exigences légales et fiscales suisses."
+        "shortDesc": "Tenue des comptes, déclarations TVA et optimisation fiscale.",
+        "heroTitle1": "Comptabilité",
+        "heroTitle2": "& Fiscalité",
+        "heroIntro": "Confiez-nous votre comptabilité et concentrez-vous sur votre cœur de métier. Nous veillons à la conformité de vos comptes et à l'optimisation de votre charge fiscale, en toute discrétion.",
+        "bullets": [
+          "Tenue de la comptabilité courante",
+          "Établissement des comptes annuels et bilans",
+          "Déclarations TVA, impôt sur le revenu, impôt sociétés"
+        ],
+        "forWho": [
+          "PME et indépendants souhaitant externaliser leur comptabilité",
+          "Sociétés en croissance nécessitant un suivi structuré",
+          "Start-ups cherchant à se conformer aux exigences légales suisses",
+          "Entrepreneurs souhaitant optimiser leur charge fiscale"
+        ]
       },
       {
-        "title": "Conseil en gestion",
-        "shortDesc": "Pilotage financier, tableaux de bord et stratégie d'entreprise.",
-        "longDesc": "Nous accompagnons les dirigeants dans leurs décisions stratégiques : analyse financière, mise en place de tableaux de bord personnalisés, planification budgétaire, évaluation d'entreprise et conseil en développement. Transformez vos données financières en véritables leviers de croissance."
+        "title": "Ressources Humaines",
+        "shortDesc": "Fiches de paie, déclarations sociales et conseil RH.",
+        "heroTitle1": "Ressources",
+        "heroTitle2": "Humaines",
+        "heroIntro": "La gestion du personnel exige rigueur et connaissance des obligations sociales suisses. Nous prenons en charge vos démarches RH pour vous permettre de vous concentrer pleinement sur votre activité.",
+        "bullets": [
+          "Établissement des fiches de paie",
+          "Déclarations sociales (AVS, LPP, LAA…)",
+          "Conseil en gestion du personnel"
+        ],
+        "forWho": [
+          "Entreprises employant des collaborateurs en Suisse",
+          "Employeurs confrontés aux obligations sociales",
+          "Dirigeants souhaitant déléguer la gestion de la paie",
+          "Structures en expansion recrutant de nouveaux employés"
+        ]
       },
       {
-        "title": "Audit & Révision",
-        "shortDesc": "Contrôle des comptes, révision limitée et audit restreint.",
-        "longDesc": "Nos services d'audit offrent un regard indépendant et rigoureux sur vos états financiers. Nous réalisons des révisions limitées et des audits restreints conformément aux normes d'audit suisses, garantissant transparence et crédibilité auprès de vos partenaires financiers et institutionnels."
+        "title": "Gestion administrative",
+        "shortDesc": "Facturation, suivi des flux et domiciliation d'entreprise.",
+        "heroTitle1": "Gestion",
+        "heroTitle2": "administrative",
+        "heroIntro": "Une administration saine est le socle d'une entreprise sereine. Nous gérons vos flux administratifs quotidiens avec rigueur pour que rien ne soit laissé au hasard.",
+        "bullets": [
+          "Facturation et gestion des paiements",
+          "Suivi des débiteurs et créanciers",
+          "Domiciliation d'entreprise et réacheminement de courrier"
+        ],
+        "forWho": [
+          "Indépendants et petites structures manquant de ressources internes",
+          "Entreprises souhaitant externaliser leur back-office",
+          "Sociétés nouvellement créées cherchant une adresse professionnelle",
+          "Groupes ayant besoin d'un suivi rigoureux de leurs flux financiers"
+        ]
       },
       {
-        "title": "Planification patrimoniale",
-        "shortDesc": "Structuration du patrimoine, succession et prévoyance.",
-        "longDesc": "Anticipez l'avenir avec sérénité. Nous vous conseillons sur la structuration de votre patrimoine privé et professionnel, la planification successorale, l'optimisation de votre prévoyance (2e et 3e pilier) et la protection de votre famille et de vos actifs dans la durée."
-      },
-      {
-        "title": "Création d'entreprise",
-        "shortDesc": "Accompagnement complet de l'idée à l'immatriculation.",
-        "longDesc": "Donnez vie à votre projet entrepreneurial avec l'appui de nos experts. Choix de la forme juridique adaptée, rédaction des statuts, immatriculation au Registre du commerce, ouverture des comptes bancaires et mise en place administrative et comptable : nous gérons chaque étape à vos côtés."
-      },
-      {
-        "title": "RH & Paie",
-        "shortDesc": "Gestion des salaires, assurances sociales et droit du travail.",
-        "longDesc": "Externalisez la gestion de votre personnel à nos spécialistes RH. Traitement des fiches de salaire, déclarations aux assurances sociales (AVS, LPP, LAA), gestion des contrats de travail, suivi des absences et congés, et veille réglementaire continue : nous vous libérons des contraintes administratives."
+        "title": "Gestion Immobilière",
+        "shortDesc": "Gestion locative, suivi financier et accompagnement juridique.",
+        "heroTitle1": "Gestion",
+        "heroTitle2": "Immobilière",
+        "heroIntro": "Propriétaire ou investisseur, confiez la gestion de votre patrimoine immobilier à nos spécialistes. Nous veillons à la rentabilité et à la conformité de vos biens avec professionnalisme.",
+        "bullets": [
+          "Gestion locative",
+          "Gestion administrative et financière",
+          "Accompagnement juridique"
+        ],
+        "forWho": [
+          "Propriétaires souhaitant déléguer la gestion de leurs biens",
+          "Investisseurs immobiliers cherchant un suivi professionnel",
+          "Sociétés immobilières ayant besoin d'un gestionnaire externe",
+          "Particuliers gérant un patrimoine locatif en Suisse"
+        ]
       }
     ]
   },
@@ -128,6 +173,8 @@
   "testimonials": {
     "overline": "Ils nous font confiance",
     "title": "Ce que disent nos clients",
+    "titleMain": "Ce que disent",
+    "titleAccent": "nos clients",
     "items": [
       {
         "quote": "SRD Partners a transformé notre approche financière. Grâce à leur expertise pointue, nous avons optimisé notre charge fiscale de manière significative tout en gagnant une visibilité accrue sur nos performances.",
@@ -179,13 +226,13 @@
   },
   "about": {
     "overline": "Le cabinet",
-    "title1": "À",
-    "title2": "propos",
+    "title1": "Qui",
+    "title2": "sommes-nous",
     "subtitle": "Fondé par des professionnels romands passionnés, SRD Partners est bien plus qu'un cabinet fiduciaire : c'est un partenaire engagé dans la durée.",
     "missionOverline": "Notre mission",
-    "missionTitle": "Libérer les entrepreneurs de la complexité administrative",
+    "missionTitle": "Accompagner les entrepreneurs avec rigueur",
     "missionP1": "Chez SRD Partners, notre mission est simple : vous permettre de vous concentrer sur votre cœur de métier, pendant que nous veillons à la santé financière, fiscale et administrative de votre entreprise.",
-    "missionP2": "Fondé il y a plus de 15 ans à Genève, notre cabinet accompagne des PME, des start-ups, des indépendants et des familles à travers toute la Romandie. Notre approche combine expertise technique de haut niveau et relation humaine privilégiée.",
+    "missionP2": "Fondé à Corcelles NE, notre cabinet accompagne des PME, des indépendants et des familles à travers toute la Romandie. Notre approche combine expertise technique de haut niveau et relation humaine privilégiée.",
     "missionP3": "Nous ne sommes pas de simples prestataires : nous sommes vos partenaires, présents à chaque étape importante de la vie de votre entreprise.",
     "missionCta": "Prendre rendez-vous",
     "stats": {
@@ -221,28 +268,18 @@
     "subtitle": "Des professionnels aguerris, engagés dans leur métier et dans la relation client.",
     "members": [
       {
-        "name": "Sophie Reinhart",
-        "role": "Associée fondatrice – Expert-comptable",
-        "bio": "Diplômée en économie d'entreprise, Sophie dirige le cabinet avec 18 ans d'expérience dans l'audit et le conseil financier pour les PME romandes.",
-        "initials": "SR"
+        "name": "Cremilde Hirschi",
+        "role": "Administration · Finance · RH",
+        "bio": "Interlocutrice principale du cabinet, Cremilde coordonne l'ensemble des dossiers clients avec rigueur et disponibilité.",
+        "initials": "CH",
+        "quote": "Je m'engage personnellement à accompagner chaque client avec rigueur et une totale disponibilité."
       },
       {
-        "name": "David Marchand",
-        "role": "Associé – Conseil fiscal & juridique",
-        "bio": "Licencié en droit et expert fiscal agréé, David accompagne les clients dans l'optimisation de leur structure fiscale et leurs projets de transmission d'entreprise.",
-        "initials": "DM"
-      },
-      {
-        "name": "Isabelle Chopard",
-        "role": "Responsable comptabilité",
-        "bio": "Avec plus de 10 ans d'expérience, Isabelle garantit la précision et la conformité des états financiers de nos clients avec un souci du détail constant.",
-        "initials": "IC"
-      },
-      {
-        "name": "Raphaël Torres",
-        "role": "Consultant RH & Paie",
-        "bio": "Spécialiste des ressources humaines, Raphaël gère les dossiers du personnel et veille à la conformité sociale de nos clients avec rigueur et discrétion.",
-        "initials": "RT"
+        "name": "À définir",
+        "role": "Comptabilité & Fiscalité",
+        "bio": "Spécialiste de la tenue des comptes et des déclarations fiscales pour les PME et indépendants romands.",
+        "initials": "–",
+        "quote": ""
       }
     ]
   },
@@ -256,13 +293,13 @@
     "emailLabel": "E-mail",
     "phoneLabel": "Téléphone",
     "mainOfficeLabel": "Siège principal",
-    "lausanneOfficeLabel": "Bureau de Lausanne",
     "hours": "Lun–Ven : 8h00–18h00",
     "country": "Suisse",
     "form": {
       "overline": "Contactez-nous",
       "title": "Parlons de votre projet",
       "subtitle": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures ouvrables.",
+      "trustLine": "Réponse sous 24h ouvrables · Confidentialité garantie",
       "fullName": "Nom et prénom *",
       "company": "Société",
       "email": "Adresse e-mail *",
@@ -301,22 +338,66 @@
       }
     }
   },
+  "activity": {
+    "overline": "Domaines d'activité",
+    "title": "Nos expertises au cœur de votre développement",
+    "description": "De la révision comptable à la gestion administrative, nous couvrons l'ensemble des besoins fiduciaires de votre entreprise avec rigueur et confidentialité.",
+    "items": {
+      "revision": {
+        "title": "Révision & Audit",
+        "description": "Contrôle indépendant et rigoureux de vos états financiers selon les normes d'audit suisses."
+      },
+      "payroll": {
+        "title": "Salaires & RH",
+        "description": "Traitement des fiches de salaire, déclarations sociales et gestion des contrats de travail."
+      },
+      "tax": {
+        "title": "Fiscalité",
+        "description": "Optimisation de votre charge fiscale et conformité avec la législation fiscale suisse."
+      },
+      "administration": {
+        "title": "Administration",
+        "description": "Secrétariat juridique, domiciliation d'entreprise et gestion administrative complète."
+      }
+    }
+  },
+  "cta": {
+    "overline": "Passons à l'action",
+    "titleMain": "Parlons de",
+    "titleAccent": "votre entreprise.",
+    "subtitle": "Premier entretien sans engagement. Réponse garantie sous 24 heures ouvrables.",
+    "button": "Prendre contact"
+  },
+  "imageBreak": {
+    "tagline": "L'excellence fiduciaire, au service de votre ambition."
+  },
   "footer": {
     "navigation": "Navigation",
     "services": "Services",
     "contact": "Contact",
-    "tagline": "Genève • Lausanne • Suisse",
-    "rights": "Tous droits réservés."
+    "tagline": "Corcelles NE • Suisse",
+    "rights": "Tous droits réservés.",
+    "signature": "Cabinet fiduciaire indépendant · Romandie"
   },
   "meta": {
-    "homeTitle": "SRD Partners Sàrl – Fiduciaire & Conseil d'entreprise à Genève",
-    "homeDescription": "Cabinet fiduciaire à Genève et Lausanne : comptabilité, fiscalité, audit, conseil en gestion et création d'entreprise. SRD Partners accompagne les PME romandes.",
+    "homeTitle": "SRD Partners Sàrl – Fiduciaire & Conseil d'entreprise en Suisse romande",
+    "homeDescription": "Cabinet fiduciaire à Corcelles NE : comptabilité, fiscalité, ressources humaines, gestion administrative et immobilière. SRD Partners accompagne les PME romandes.",
     "servicesTitle": "Nos Services – SRD Partners Sàrl",
-    "servicesDescription": "Découvrez l'ensemble de nos services fiduciaires : comptabilité, fiscalité, audit, planification patrimoniale, création d'entreprise et gestion RH & paie.",
-    "aboutTitle": "À propos – SRD Partners Sàrl",
-    "aboutDescription": "Découvrez l'équipe et les valeurs de SRD Partners, votre cabinet fiduciaire de confiance en Romandie depuis plus de 15 ans.",
+    "servicesDescription": "Découvrez nos quatre domaines d'expertise : comptabilité & fiscalité, ressources humaines, gestion administrative et gestion immobilière.",
+    "comptaTitle": "Comptabilité & Fiscalité – SRD Partners Sàrl",
+    "comptaDescription": "Tenue de la comptabilité, comptes annuels et déclarations fiscales. SRD Partners gère votre comptabilité avec rigueur et confidentialité.",
+    "rhTitle": "Ressources Humaines – SRD Partners Sàrl",
+    "rhDescription": "Fiches de paie, déclarations sociales et conseil RH. SRD Partners prend en charge vos obligations employeur en Suisse.",
+    "adminTitle": "Gestion administrative – SRD Partners Sàrl",
+    "adminDescription": "Facturation, suivi débiteurs/créanciers et domiciliation d'entreprise. Externalisez votre administration avec SRD Partners.",
+    "immoTitle": "Gestion Immobilière – SRD Partners Sàrl",
+    "immoDescription": "Gestion locative, suivi financier et accompagnement juridique pour propriétaires et investisseurs en Suisse.",
+    "whoWeAreTitle": "Qui sommes-nous – SRD Partners Sàrl",
+    "whoWeAreDescription": "Découvrez l'équipe et les valeurs de SRD Partners, votre cabinet fiduciaire de confiance en Romandie.",
+    "aboutTitle": "Qui sommes-nous – SRD Partners Sàrl",
+    "aboutDescription": "Découvrez l'équipe et les valeurs de SRD Partners, votre cabinet fiduciaire de confiance en Romandie.",
     "contactTitle": "Contact – SRD Partners Sàrl",
-    "contactDescription": "Contactez SRD Partners pour tous vos besoins fiduciaires. Notre équipe est disponible à Genève et Lausanne du lundi au vendredi.",
+    "contactDescription": "Contactez SRD Partners pour tous vos besoins fiduciaires. Notre équipe est disponible du lundi au vendredi.",
     "titleTemplate": "%s | SRD Partners"
   },
   "brand": {
@@ -325,4 +406,3 @@
     "baseline": "Votre partenaire de confiance pour la gestion, la fiscalité et la croissance de votre entreprise en Romandie."
   }
 }
-

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-type BgVariant = 'cream' | 'stone' | 'navy' | 'white'
+type BgVariant = 'cream' | 'stone' | 'navy' | 'white' | 'mineral'
 
 interface SectionProps {
   children: React.ReactNode
@@ -25,10 +25,11 @@ interface SectionProps {
 }
 
 const bgMap: Record<BgVariant, string> = {
-  cream: 'bg-cream',
-  stone: 'bg-stone',
-  navy: 'bg-navy',
-  white: 'bg-white',
+  cream:   'bg-cream',
+  stone:   'bg-stone',
+  navy:    'bg-navy',
+  white:   'bg-white',
+  mineral: 'bg-mineral',
 }
 
 // Points SVG pour le triangle de biseau (viewBox 0 0 1440 80)
@@ -73,8 +74,8 @@ export function Section({
           noPadding
             ? ''
             : slant
-              ? 'pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20'
-              : 'py-16 sm:py-20'
+              ? 'pt-20 sm:pt-28 md:pt-32 pb-20 sm:pb-28'
+              : 'py-20 sm:py-28'
         )}
       >
         {children}

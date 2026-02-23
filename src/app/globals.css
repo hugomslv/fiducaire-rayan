@@ -7,6 +7,18 @@
 ───────────────────────────────────────── */
 :root {
   --slant-h: 4rem;   /* hauteur du biseau de section */
+
+  /* Tokens RGB — permettent rgba() dans les gradients sans hardcoder les valeurs */
+  --primary-950-rgb: 34, 17, 38;   /* #221126 */
+  --primary-900-rgb: 50, 25, 58;   /* #32193A */
+  --primary-500-rgb: 121, 42, 130; /* #792A82 — violet logo */
+  --gold-rgb:        151, 20, 79;  /* #97144F — crimson accent */
+  --cta-rgb: 138, 37, 72;          /* rgb(138, 37, 72) */
+  --cta-hover-rgb: 118, 31, 62;    /* darker hover */
+
+  /* ── Couleur minérale — lavande grise premium ── */
+  --color-mineral:     #D2C9D6;
+  --color-mineral-rgb: 210, 201, 214;
 }
 
 @media (max-width: 640px) {
@@ -75,7 +87,7 @@
 
   /* Titre de section H2 — Playfair léger, espacement raffiné */
   .section-title {
-    @apply font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-navy leading-[1.15] tracking-[-0.01em];
+    @apply font-display text-3xl sm:text-[2.5rem] lg:text-[3.25rem] font-normal text-navy leading-[1.12] tracking-[-0.02em];
   }
 
   /* Sous-titre de section */
@@ -85,35 +97,52 @@
 
   /* ── Bouton principal — crimson, pill, hover plus foncé ── */
   .btn-primary {
-    @apply inline-flex items-center gap-2
-           px-7 py-3.5
-           bg-gold text-white font-body font-semibold text-[13px] tracking-[0.04em]
+    @apply inline-flex items-center gap-2.5
+           px-8 py-4
+           text-white font-body font-semibold text-[13px] tracking-[0.05em]
            rounded-full
-           shadow-gold
            transition-all duration-300 ease-smooth
-           hover:bg-gold-dark hover:shadow-none hover:-translate-y-0.5
-           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+           hover:-translate-y-0.5 hover:shadow-gold
+           focus-visible:outline-2 focus-visible:outline-offset-2;
+    background-color: rgb(var(--cta-rgb));
+    outline-color: rgb(var(--cta-rgb));
   }
 
-  /* ── Bouton secondaire — outline violet (primary) ── */
+  .btn-primary:hover {
+    background-color: rgb(var(--cta-hover-rgb));
+  }
+
+  .btn-primary:focus-visible {
+    outline-color: rgb(var(--cta-rgb));
+  }
+
+  /* ── Bouton secondaire — outline cramoisi (cohérent avec btn-primary) ── */
   .btn-outline {
-    @apply inline-flex items-center gap-2
-           px-7 py-3.5
-           border border-primary-500 text-primary-500 font-body font-semibold text-[13px] tracking-[0.04em]
-           rounded-full
+    @apply inline-flex items-center gap-2.5
+           px-8 py-4
+           font-body font-semibold text-[13px] tracking-[0.05em]
+           rounded-full border
            transition-all duration-300 ease-smooth
-           hover:bg-primary-500 hover:text-white hover:-translate-y-0.5
-           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500;
+           hover:-translate-y-0.5
+           focus-visible:outline-2 focus-visible:outline-offset-2;
+    border-color: rgb(var(--cta-rgb));
+    color:        rgb(var(--cta-rgb));
+    outline-color: rgb(var(--cta-rgb));
+  }
+
+  .btn-outline:hover {
+    background-color: rgb(var(--cta-rgb));
+    color: white;
   }
 
   /* ── Bouton outline (version sombre — sur fond navy) ── */
   .btn-outline-dark {
-    @apply inline-flex items-center gap-2
-           px-7 py-3.5
-           border border-white/40 text-white font-body font-semibold text-[13px] tracking-[0.04em]
+    @apply inline-flex items-center gap-2.5
+           px-8 py-4
+           border border-white/35 text-white font-body font-semibold text-[13px] tracking-[0.05em]
            rounded-full
            transition-all duration-300 ease-smooth
-           hover:border-white hover:bg-white/10 hover:-translate-y-0.5
+           hover:border-white/70 hover:bg-white/10 hover:-translate-y-0.5
            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
   }
 
@@ -122,6 +151,18 @@
     @apply bg-white rounded-xl border border-black/[0.05] shadow-card
            transition-all duration-300 ease-smooth
            hover:-translate-y-1 hover:shadow-card-hover;
+  }
+
+  /*
+   * .panel-rise
+   * Panel de contenu qui "monte" visuellement sur la section précédente.
+   * Effet : panneau levé au-dessus d'un fond d'image, coins arrondis en haut,
+   * ombre douce remontant vers la section précédente.
+   * Utilisé avec un margin-top négatif (-mt-10 / -mt-16) pour l'overlap.
+   */
+  .panel-rise {
+    border-radius: 2.5rem 2.5rem 0 0;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.10), 0 -1px 0 rgba(0, 0, 0, 0.04);
   }
 }
 
@@ -158,9 +199,9 @@
 ───────────────────────────────────────── */
 .hero-gradient {
   background:
-    radial-gradient(ellipse at 70% 25%, rgba(194, 18, 69, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 25%, rgb(151, 20, 79, 0.14) 0%, transparent 55%),
     radial-gradient(ellipse at 20% 80%, rgba(45, 26, 74, 0.50) 0%, transparent 50%),
-    linear-gradient(135deg, #1A1028 0%, #221438 50%, #1A1028 100%);
+    linear-gradient(135deg, #792A82 0%, #221438 50%, #792A82 100%);
 }
 
 /* Texture grain subtile pour le hero */
@@ -175,6 +216,61 @@
   opacity: 0.4;
 }
 
+/* ─────────────────────────────────────────
+   Hero — Overlay premium multi-couche
+   Tokens : --primary-950-rgb | --primary-900-rgb
+───────────────────────────────────────── */
+
+/*
+ * .hero-overlay
+ * Combinaison de deux couches :
+ *   1. Radiale douce centrée sur la zone texte (profondeur, focus visuel)
+ *   2. Fondu linéaire gauche → droite (lisibilité + blend image)
+ *
+ * Courbe d'opacité : 95% → 90% → 75% → 40% → 10% → 0%
+ * Aucune coupure visible, transition continue.
+ */
+.hero-overlay {
+  background:
+    /* Couche 1 — Lueur focale douce côté texte (profondeur premium) */
+    radial-gradient(
+      ellipse 52% 75% at 16% 55%,
+      rgba(var(--primary-900-rgb), 0.26) 0%,
+      transparent                        100%
+    ),
+    /* Couche 2 — Fondu principal gauche → droite */
+    linear-gradient(
+      90deg,
+      rgba(var(--primary-950-rgb), 0.95)  0%,
+      rgba(var(--primary-950-rgb), 0.90) 20%,
+      rgba(var(--primary-950-rgb), 0.75) 40%,
+      rgba(var(--primary-950-rgb), 0.40) 65%,
+      rgba(var(--primary-950-rgb), 0.10) 85%,
+      rgba(var(--primary-950-rgb), 0.00) 100%
+    );
+}
+
+/* Mobile / tablette : fondu vertical, overlay plus fort */
+@media (max-width: 1023px) {
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(var(--primary-950-rgb), 0.72)  0%,
+      rgba(var(--primary-950-rgb), 0.58) 45%,
+      rgba(var(--primary-950-rgb), 0.72) 100%
+    );
+  }
+}
+
+/* Fondu bas — transition douce vers la section suivante */
+.hero-bottom-fade {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(var(--primary-950-rgb), 0.45)
+  );
+}
+
 /* Ligne décorative crimson */
 .gold-line {
   display: inline-block;
@@ -182,3 +278,80 @@
   height: 2px;
   background-color: theme('colors.gold.DEFAULT');
 }
+
+/* ─────────────────────────────────────────
+   Fond minéral — texture marbrée CSS-only, quasi imperceptible
+   Usage sections claires : <Section bg="mineral">
+   Usage hero sombre : <div class="hero-mineral absolute inset-0" aria-hidden>
+───────────────────────────────────────── */
+
+/* Base fond minéral — utilise la CSS var pour la cohérence globale */
+.bg-mineral {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-mineral);
+}
+
+/*
+ * Marbré CSS — veine diagonale + radiales douces.
+ * z-index: 0 → sous biseau (z-10) et contenu (z-20).
+ * Opacités : 8% max — on "sent" la matière sans la voir clairement.
+ */
+.bg-mineral::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    /* Veine principale — diagonale, simule un minéral laminé */
+    linear-gradient(
+      112deg,
+      transparent                                0%,
+      rgba(var(--primary-500-rgb), 0.055)       28%,
+      rgba(255, 255, 255, 0.08)                 38%,
+      rgba(var(--primary-500-rgb), 0.040)       48%,
+      transparent                               70%
+    ),
+    /* Lueur violet — coin haut-gauche */
+    radial-gradient(ellipse 75% 50% at 15% 22%, rgba(var(--primary-500-rgb), 0.07)  0%, transparent 55%),
+    /* Lueur crimson — coin bas-droite */
+    radial-gradient(ellipse 60% 40% at 88% 82%, rgba(var(--gold-rgb), 0.055)        0%, transparent 50%),
+    /* Éclat blanc — simule un reflet sur pierre polie */
+    radial-gradient(ellipse 40% 30% at 50%  5%, rgba(255, 255, 255, 0.14)           0%, transparent 45%);
+}
+
+/*
+ * Overlay texture pour le hero (fond sombre).
+ * Utiliser comme div aria-hidden absolu à l'intérieur de la section.
+ * mix-blend-mode: soft-light → s'intègre au fond sombre sans le charger.
+ */
+.hero-mineral {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 22% 35%, rgba(255, 255, 255, 0.040) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 40% at 80% 60%, rgba(255, 255, 255, 0.025) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 50% 95%, rgba(151, 20, 79, 0.080)  0%, transparent 45%);
+  mix-blend-mode: soft-light;
+}
+
+/* ─────────────────────────────────────────
+   ExpertiseParallaxSection — layout sticky
+   Appliqué uniquement au breakpoint lg (≥ 1024px).
+   Sur mobile ces classes sont sans effet (position:relative, hauteur auto).
+───────────────────────────────────────── */
+@media (min-width: 1024px) {
+  /* Section plus haute que le viewport — crée l'espace de scroll pour le parallaxe */
+  .expertise-track {
+    min-height: 200vh;
+  }
+
+  /* Container épinglé — reste dans le viewport pendant tout le scroll de la section */
+  .expertise-pin {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+

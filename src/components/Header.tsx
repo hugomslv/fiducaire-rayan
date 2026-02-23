@@ -88,7 +88,10 @@ export function Header({ locale, items, ctaLink, brandLegal, aria }: HeaderProps
       )}
     >
       <div className="container-main">
-        <div className="flex items-center justify-between h-16 sm:h-[72px]">
+        <div className={cn(
+          'flex items-center justify-between transition-all duration-300',
+          scrolled ? 'h-14 sm:h-16' : 'h-20 sm:h-24'
+        )}>
 
           {/* ── Logo ─────────────────────────────── */}
           <Link
@@ -102,7 +105,7 @@ export function Header({ locale, items, ctaLink, brandLegal, aria }: HeaderProps
                 alt={brandLegal}
                 width={900}
                 height={600}
-                className="h-7 w-auto"
+                className={cn('w-auto transition-all duration-300', scrolled ? 'h-8' : 'h-12')}
                 priority
               />
             </div>

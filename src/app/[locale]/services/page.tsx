@@ -4,7 +4,6 @@ import { getMessages, isValidLocale, defaultLocale, type Locale } from '@/lib/i1
 import { services, BG } from '@/lib/siteData'
 import { Section } from '@/components/Section'
 import { PremiumHeading, Accent } from '@/components/PremiumHeading'
-import { ServiceCard } from '@/components/ServiceCard'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { ContactBlock } from '@/components/ContactBlock'
 import { Footer } from '@/components/Footer'
@@ -36,14 +35,14 @@ export default async function ServicesPage({
   const navItems = [
     { label: t.nav.home,     href: `/${validLocale}` },
     { label: t.nav.services, href: `/${validLocale}/services` },
-    { label: t.nav.about,    href: `/${validLocale}/a-propos` },
+    { label: t.nav.whoWeAre, href: `/${validLocale}/qui-sommes-nous` },
     { label: t.nav.contact,  href: `/${validLocale}/contact` },
   ]
 
   return (
     <>
       {/* ── Hero page ──────────────────────── */}
-      <section className="relative bg-navy overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
+      <section className="relative bg-navy overflow-hidden pt-36 pb-20 sm:pt-48 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]" aria-hidden="true">
           <div
             style={{
@@ -74,25 +73,54 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* ── Grille services ──────────────────── */}
-      <Section bg="cream" slant="right" slantFill={BG.navy}>
-        <ScrollReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+      {/* ── Grille 4 domaines ─────────────── */}
+      <Section bg="mineral" slant="right" slantFill={BG.navy}>
+        <ScrollReveal className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           {services.map((s, i) => (
-            <div key={s.id} id={s.id}>
-              <ServiceCard
-                icon={s.icon}
-                title={t.services.items[i].title}
-                description={t.services.items[i].longDesc}
-                index={i}
-                long
-              />
-            </div>
+            <article
+              key={s.id}
+              className="group bg-white rounded-2xl border border-black/[0.05] shadow-card p-8 sm:p-10 flex flex-col gap-6 hover:-translate-y-1 hover:shadow-premium transition-all duration-300"
+            >
+              {/* En-tête */}
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gold/[0.08] text-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/[0.14]">
+                  <Icon name={s.icon} size={22} strokeWidth={1.5} />
+                </div>
+                <h2 className="font-body text-xl font-semibold text-ink leading-snug pt-1">
+                  {t.services.items[i].title}
+                </h2>
+              </div>
+
+              {/* Séparateur */}
+              <div className="h-px bg-black/[0.06]" />
+
+              {/* Bullets */}
+              <ul className="flex flex-col gap-3">
+                {t.services.items[i].bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-3">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
+                    <span className="font-body text-sm text-muted leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <div className="mt-auto">
+                <Link
+                  href={`/${validLocale}/services/${s.id}`}
+                  className="inline-flex items-center gap-2 font-body text-sm font-semibold text-gold hover:gap-3 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
+                >
+                  {t.services.discoverCta}
+                  <Icon name="arrow" size={14} strokeWidth={2} />
+                </Link>
+              </div>
+            </article>
           ))}
         </ScrollReveal>
       </Section>
 
       {/* ── Promesse ─────────────────────────── */}
-      <Section bg="stone" slant="left" slantFill={BG.cream}>
+      <Section bg="stone" slant="left" slantFill={BG.mineral}>
         <div className="max-w-3xl mx-auto text-center">
           <span className="section-label">{t.services.promiseOverline}</span>
           <h2 className="section-title">{t.services.promiseTitle}</h2>
@@ -102,7 +130,7 @@ export default async function ServicesPage({
               {t.services.promiseCta1}
               <Icon name="arrow" size={16} strokeWidth={2} />
             </Link>
-            <Link href={`/${validLocale}/a-propos`} className="btn-outline">
+            <Link href={`/${validLocale}/qui-sommes-nous`} className="btn-outline">
               {t.services.promiseCta2}
             </Link>
           </div>

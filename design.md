@@ -29,9 +29,9 @@
 | Token Tailwind | Hex | Usage |
 |----------------|-----|-------|
 | `bg-cream` | `#F8F9FC` | Fond section principale (cool near-white) |
-| `bg-stone` | `#EEF0F7` | Fond section alternée (cool light gray) |
-| `bg-navy` / `bg-navy` | `#1A1028` | Fond sombre — hero, footer, sections nuit |
-| `text-gold` / `bg-gold` | `#C21245` | Alias accent crimson — CTA, overlines, séparateurs |
+| `bg-stone` | `#D2C9D6` | Fond section alternée (cool light gray) |
+| `bg-navy` / `bg-navy` | `#792A82` | Fond sombre — hero, footer, sections nuit |
+| `text-gold` / `bg-gold` | `#97144F` | Alias accent crimson — CTA, overlines, séparateurs |
 | `text-gold-light` | `#E84272` | Hover CTA, version claire |
 | `text-gold-pale` / `bg-gold-pale` | `#FFF0F4` | Fond très subtil teinté crimson |
 | `text-ink` | `#1A0F2A` | Texte principal dark (violet nuit) |
@@ -64,7 +64,7 @@ accent-200  #FFC3D9
 accent-300  #FF95BB
 accent-400  #FF5A8F
 accent-500  #E01855  — Version usable (contraste AA white)
-accent-600  #C21245  ← VALEUR LOGO EXACTE (= gold.DEFAULT)
+accent-600  #97144F  ← VALEUR LOGO EXACTE (= gold.DEFAULT)
 accent-700  #A00E3A  — Hover (= gold.dark)
 accent-800  #81092F
 accent-900  #620624
@@ -77,7 +77,7 @@ accent-950  #3D0314
 
 ```
 gray-50   #F8F9FC  — Fond (= cream)
-gray-100  #EEF0F7  — Fond alterné (= stone)
+gray-100  #D2C9D6  — Fond alterné (= stone)
 gray-200  #DDE1ED
 gray-300  #C4CAD9
 gray-400  #9BA4BB
@@ -183,13 +183,13 @@ hover:         -translate-y-1 + shadow-card-hover
 
 | Classe | Couleur | Forme | Usage |
 |--------|---------|-------|-------|
-| `.btn-primary` | bg-gold (#C21245) + white text | `rounded-full` (pill) | CTA principal |
+| `.btn-primary` | bg-gold (#97144F) + white text | `rounded-full` (pill) | CTA principal |
 | `.btn-outline` | border/text primary-500 (#7B2FB5) | `rounded-full` (pill) | Action secondaire sur fond clair |
 | `.btn-outline-dark` | border/text white/40→white | `rounded-full` (pill) | Action secondaire sur fond sombre |
 
 ```css
 /* Exemple btn-primary généré */
-background: #C21245;
+background: #97144F;
 color: white;
 border-radius: 9999px;
 padding: 14px 28px;
@@ -197,7 +197,7 @@ font-family: Manrope;
 font-weight: 600;
 font-size: 13px;
 letter-spacing: 0.04em;
-box-shadow: 0 4px 20px rgba(194,18,69,0.30);
+box-shadow: 0 4px 20px rgb(151, 20, 79,0.30);
 ```
 
 ---
@@ -208,7 +208,7 @@ box-shadow: 0 4px 20px rgba(194,18,69,0.30);
 |-------|-----------|-------|
 | `shadow-card` | `0 1px 3px rgba(26,10,40,0.06), 0 4px 16px rgba(26,10,40,0.06)` | Cartes standard |
 | `shadow-card-hover` | `0 8px 32px rgba(26,10,40,0.14)` | Hover cartes standard |
-| `shadow-gold` | `0 4px 20px rgba(194,18,69,0.30)` | Ombre CTA crimson |
+| `shadow-gold` | `0 4px 20px rgb(151, 20, 79,0.30)` | Ombre CTA crimson |
 | `shadow-premium` | Multicouche 4 niveaux subtils | Cartes premium ServiceCard |
 | `shadow-premium-hover` | Multicouche amplifiée | Hover cartes premium |
 
@@ -259,8 +259,8 @@ Alternance des directions : `left` → `right` → `left` → `right`
 | Constante | Hex | Apparence |
 |-----------|-----|-----------|
 | `BG.cream` | `#F8F9FC` | Blanc cool — fond principal |
-| `BG.stone` | `#EEF0F7` | Gris cool clair — fond alterné |
-| `BG.navy` | `#1A1028` | Violet nuit profond — sombre |
+| `BG.stone` | `#D2C9D6` | Gris cool clair — fond alterné |
+| `BG.navy` | `#792A82` | Violet nuit profond — sombre |
 
 ---
 
@@ -296,11 +296,11 @@ Définies dans `globals.css` :
 ```css
 /* ── Couleurs ─────────────────── */
 --color-cream:          #F8F9FC;
---color-stone:          #EEF0F7;
---color-navy:           #1A1028;
+--color-stone:          #D2C9D6;
+--color-navy:           #792A82;
 --color-primary:        #7B2FB5;
 --color-primary-dark:   #31104F;
---color-accent:         #C21245;
+--color-accent:         #97144F;
 --color-accent-light:   #E84272;
 --color-accent-pale:    #FFF0F4;
 --color-accent-dark:    #A00E3A;
@@ -320,7 +320,7 @@ Définies dans `globals.css` :
 
 /* ── Ombres ───────────────────── */
 --shadow-card:    0 1px 3px rgba(26,10,40,0.06), 0 4px 16px rgba(26,10,40,0.06);
---shadow-cta:     0 4px 20px rgba(194,18,69,0.30);
+--shadow-cta:     0 4px 20px rgb(151, 20, 79,0.30);
 ```
 
 ---
@@ -338,3 +338,6 @@ Définies dans `globals.css` :
 ✗ dupliquer les hex de BG.* dans les pages — toujours importer BG de siteData
 ✗ écrire <span className="italic text-gold"> directement — utiliser <Accent>
 ```
+
+
+

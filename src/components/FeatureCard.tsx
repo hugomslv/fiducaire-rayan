@@ -10,9 +10,9 @@ interface FeatureCardProps {
 export function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <article
-      className="group flex flex-col gap-6 bg-white rounded-[28px] p-9 sm:p-10
-                 shadow-premium transition-all duration-300 ease-out
-                 hover:-translate-y-1.5 hover:shadow-premium-hover"
+      className="group flex flex-col gap-6 bg-white rounded-2xl p-9 sm:p-11
+                 border border-black/[0.04] shadow-premium transition-all duration-300 ease-out
+                 hover:-translate-y-1.5 hover:shadow-premium-hover hover:border-black/[0.07]"
     >
       {/* Icône */}
       <div className="w-12 h-12 rounded-2xl bg-gold/[0.08] text-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/[0.14]">

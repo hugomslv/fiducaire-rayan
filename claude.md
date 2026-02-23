@@ -43,9 +43,9 @@ Les couleurs, ombres et polices sont définies dans le thème Tailwind — ne pa
 | Token Tailwind      | Hex        | Usage                                    |
 |---------------------|------------|------------------------------------------|
 | `bg-cream`          | `#F8F9FC`  | Fond section principale (cool near-white)|
-| `bg-stone`          | `#EEF0F7`  | Fond section alternée (cool light gray)  |
-| `bg-navy`           | `#1A1028`  | Fond sombre — hero, footer               |
-| `text-gold` / `bg-gold` | `#C21245` | Accent crimson (arrow logo) — CTA, overlines |
+| `bg-stone`          | `#D2C9D6`  | Fond section alternée (cool light gray)  |
+| `bg-navy`           | `#792A82`  | Fond sombre — hero, footer               |
+| `text-gold` / `bg-gold` | `#97144F` | Accent crimson (arrow logo) — CTA, overlines |
 | `text-primary-500`  | `#7B2FB5`  | Violet logo SRD — titres, btn-outline    |
 | `text-ink`          | `#1A0F2A`  | Texte principal dark                     |
 | `text-muted`        | `#5A6080`  | Texte secondaire cool                    |
@@ -297,3 +297,6 @@ Géré dans `src/app/[locale]/layout.tsx` via `generateMetadata()` :
 4. **Aucune dépendance npm inutile** — le projet n'a pas de `next-intl`, `clsx`, `framer-motion`, etc.
 5. **TypeScript strict** — pas de `any`, typage explicite.
 6. **Composants = UI seulement** — la logique/données sont dans `lib/`.
+
+
+

@@ -6,7 +6,15 @@
       "Bash(node:*)",
       "Bash(test:*)",
       "Bash(npx tsc:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(tail:*)",
+      "Bash(sleep 15:*)",
+      "Bash(head:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(tasklist /FI \"PID eq 16412\" 2>&1 && tasklist /FI \"PID eq 12332\" 2>&1)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)"
     ]
   }
 }

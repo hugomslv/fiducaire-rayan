@@ -71,11 +71,15 @@ export function ContactBlock({ bg = 'stone', slant = false, slantFill, t }: Cont
 
   return (
     <Section id="contact" bg={bg} slant={slant} slantFill={slantFill}>
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+      <div className="max-w-xl mx-auto">
+        <div className="text-center mb-10">
           <span className="section-label">{t.overline}</span>
           <h2 className="section-title">{t.title}</h2>
           <p className="section-subtitle mx-auto text-center mt-4">{t.subtitle}</p>
+          {/* Ligne de réassurance */}
+          <p className="font-body text-xs text-muted/70 tracking-wide mt-3">
+            {t.trustLine}
+          </p>
         </div>
 
         {formState === 'success' ? (
@@ -132,7 +136,7 @@ export function ContactBlock({ bg = 'stone', slant = false, slantFill, t }: Cont
                   aria-invalid={!!errors.subject}
                   aria-describedby={errors.subject ? 'subject-error' : undefined}
                   className={cn(
-                    'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3',
+                    'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3.5',
                     'focus:outline-none focus:border-gold focus:bg-white transition-colors duration-200',
                     errors.subject ? 'border-red-400' : 'border-black/[0.12]'
                   )}
@@ -166,7 +170,7 @@ export function ContactBlock({ bg = 'stone', slant = false, slantFill, t }: Cont
                   aria-describedby={errors.message ? 'message-error' : undefined}
                   placeholder={t.placeholders.message}
                   className={cn(
-                    'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3 resize-none',
+                    'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3.5 resize-none',
                     'focus:outline-none focus:border-gold focus:bg-white transition-colors duration-200',
                     errors.message ? 'border-red-400' : 'border-black/[0.12]'
                   )}
@@ -225,7 +229,7 @@ function Field({ id, label, type, name, autoComplete, value, onChange, error, pl
         value={value} onChange={onChange} placeholder={placeholder}
         aria-invalid={!!error} aria-describedby={error ? `${id}-error` : undefined}
         className={cn(
-          'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3',
+          'w-full font-body text-sm text-ink bg-cream/60 border rounded px-4 py-3.5',
           'focus:outline-none focus:border-gold focus:bg-white transition-colors duration-200',
           error ? 'border-red-400' : 'border-black/[0.12]'
         )}

@@ -10,7 +10,7 @@ import {
   locales,
   type Locale,
 } from '@/lib/i18n'
-import { services } from '@/lib/siteData'
+import { services, contactInfo } from '@/lib/siteData'
 import { MEGA_COL_INDICES } from '@/lib/navConfig'
 
 // Playfair Display — serif éditorial, utilisé pour les titres H1/H2 et l'accent italique
@@ -43,7 +43,7 @@ export async function generateMetadata({
   const t = getMessages(validLocale)
 
   return {
-    metadataBase: new URL('https://srd-partners.ch'),
+    metadataBase: new URL(contactInfo.website),
     title: {
       default: t.meta.homeTitle,
       template: t.meta.titleTemplate,
@@ -79,12 +79,13 @@ export default async function LocaleLayout({
   const t = getMessages(validLocale)
 
   // Construction du mega-menu Services à partir des données centralisées
+  // Les liens pointent vers les pages dédiées (plus d'ancres)
   const megaColumns = MEGA_COL_INDICES.map((indices, colIdx) => ({
     title: colIdx === 0 ? t.header.megaMenu.col1Title : t.header.megaMenu.col2Title,
     links: indices.map((i) => ({
       label: t.services.items[i].title,
       description: t.services.items[i].shortDesc,
-      href: `/${validLocale}/services#${services[i].id}`,
+      href: `/${validLocale}/services/${services[i].id}`,
     })),
   }))
 
@@ -101,13 +102,33 @@ export default async function LocaleLayout({
         ctaLabel:    t.header.megaMenu.featuredCta,
       },
     },
-    { label: t.nav.about,   href: `/${validLocale}/a-propos` },
-    { label: t.nav.contact, href: `/${validLocale}/contact` },
+    { label: t.nav.whoWeAre, href: `/${validLocale}/qui-sommes-nous` },
+    { label: t.nav.contact,  href: `/${validLocale}/contact` },
   ]
 
   return (
     <html lang={validLocale} suppressHydrationWarning>
       <body className={`${playfairDisplay.variable} ${manrope.variable} font-body antialiased`} suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'AccountingService',
+              name: 'SRD Partners Sàrl',
+              url: contactInfo.website,
+              telephone: contactInfo.phone.replace(/\s/g, ''),
+              email: contactInfo.email,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: contactInfo.addresses[0].street,
+                postalCode: '2035',
+                addressLocality: 'Corcelles-NE',
+                addressCountry: 'CH',
+              },
+            }),
+          }}
+        />
         <Header
           locale={validLocale}
           items={headerItems}

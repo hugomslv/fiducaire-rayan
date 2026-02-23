@@ -33,16 +33,16 @@ export default async function ContactPage({
   const navItems = [
     { label: t.nav.home,     href: `/${validLocale}` },
     { label: t.nav.services, href: `/${validLocale}/services` },
-    { label: t.nav.about,    href: `/${validLocale}/a-propos` },
+    { label: t.nav.whoWeAre, href: `/${validLocale}/qui-sommes-nous` },
     { label: t.nav.contact,  href: `/${validLocale}/contact` },
   ]
 
-  const addressLabels = [t.contact.mainOfficeLabel, t.contact.lausanneOfficeLabel]
+  const addressLabels = [t.contact.mainOfficeLabel]
 
   return (
     <>
       {/* ── Hero page ──────────────────────── */}
-      <section className="relative bg-navy overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-24">
+      <section className="relative bg-navy overflow-hidden pt-36 pb-20 sm:pt-48 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]" aria-hidden="true">
           <div
             style={{
@@ -70,7 +70,7 @@ export default async function ContactPage({
       </section>
 
       {/* ── InfoCards ────────────────────────── */}
-      <Section bg="cream" slant="right" slantFill={BG.navy}>
+      <Section bg="mineral" slant="right" slantFill={BG.navy}>
         <div className="text-center mb-12">
           <span className="section-label">{t.contact.coordsOverline}</span>
           <h2 className="section-title">{t.contact.coordsTitle}</h2>
@@ -100,7 +100,7 @@ export default async function ContactPage({
       </Section>
 
       {/* ── Formulaire ───────────────────────── */}
-      <ContactBlock bg="stone" slant="left" slantFill={BG.cream} t={t.contact.form} />
+      <ContactBlock bg="stone" slant="left" slantFill={BG.mineral} t={t.contact.form} />
 
       {/* ── Footer ───────────────────────────── */}
       <Footer locale={validLocale} t={t} navItems={navItems} />

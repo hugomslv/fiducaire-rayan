@@ -4,9 +4,10 @@
 // Couleurs de fond des sections — utilisées pour les biseaux (slantFill).
 // Centralisé ici pour éviter la duplication dans chaque page.
 export const BG = {
-  cream: '#F8F9FC',
-  stone: '#EEF0F7',
-  navy:  '#1A1028',
+  cream:   '#F8F9FC',
+  stone:   '#D2C9D6',
+  navy:    '#792A82',
+  mineral: '#D2C9D6',
 } as const
 
 export type IconName =
@@ -22,25 +23,36 @@ export type IconName =
   | 'linkedin'
 
 export const services = [
-  { id: 'comptabilite', icon: 'calculator' as IconName },
-  { id: 'conseil',      icon: 'trending'    as IconName },
-  { id: 'audit',        icon: 'search'      as IconName },
-  { id: 'patrimoine',   icon: 'home'        as IconName },
-  { id: 'creation',     icon: 'rocket'      as IconName },
-  { id: 'rh',           icon: 'users'       as IconName },
+  { id: 'comptabilite-fiscalite',  icon: 'calculator' as IconName },
+  { id: 'ressources-humaines',     icon: 'users'      as IconName },
+  { id: 'gestion-administrative',  icon: 'shield'     as IconName },
+  { id: 'gestion-immobiliere',     icon: 'home'       as IconName },
 ] as const
 
 export const featureIcons: IconName[] = ['shield', 'handshake', 'lock']
 
+export const activityDomains = [
+  { id: 'revision',       icon: 'search'     as IconName },
+  { id: 'payroll',        icon: 'users'      as IconName },
+  { id: 'tax',            icon: 'calculator' as IconName },
+  { id: 'administration', icon: 'shield'     as IconName },
+] as const
+
 export const contactInfo = {
-  email: 'info@srd-partners.ch',
-  phone: '+41 22 000 00 00',
+  /** Interlocutrice principale */
+  contact: 'Cremilde Hirschi',
+  role:    'Administration · Finance · RH',
+  email:   'cremilde.hirschi@srdpartners.ch',
+  phone:   '+41 32 857 24 19',
+  website: 'https://www.srdpartners.ch',
   addresses: [
-    { id: 'main',     street: 'Route de Chêne 36',    city: '1208 Genève'   },
-    { id: 'lausanne', street: 'Avenue de la Gare 10', city: '1003 Lausanne' },
+    { id: 'main', street: 'Les Vernets 2', city: '2035 Corcelles NE' },
   ],
 } as const
 
 export const socials = [
   { label: 'LinkedIn', href: '#', icon: 'linkedin' as IconName },
 ] as const
+
+
+

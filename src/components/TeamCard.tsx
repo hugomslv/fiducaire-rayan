@@ -1,34 +1,34 @@
-import { Card } from './Card'
-
 interface TeamCardProps {
   name: string
   role: string
   bio: string
   initials: string
+  quote?: string
 }
 
-export function TeamCard({ name, role, bio, initials }: TeamCardProps) {
+export function TeamCard({ name, role, bio, initials, quote }: TeamCardProps) {
   return (
-    <Card className="p-8 flex flex-col gap-5">
-      {/* Avatar initiales */}
-      <div className="flex items-center gap-4">
-        <div
-          className="w-14 h-14 rounded-full bg-navy text-cream flex items-center justify-center font-body text-xl font-bold flex-shrink-0"
-          aria-hidden="true"
-        >
-          {initials}
-        </div>
-        <div>
-          <h3 className="font-body text-xl font-semibold text-navy leading-snug">{name}</h3>
-          <p className="font-body text-xs text-gold font-medium tracking-wide mt-0.5">{role}</p>
-        </div>
+    <div>
+      {/* Avatar — cercle minimaliste, grandes initiales */}
+      <div
+        className="w-20 h-20 rounded-full bg-primary-50 border border-primary-100 text-primary-500 flex items-center justify-center font-display text-2xl font-light mb-6"
+        aria-hidden="true"
+      >
+        {initials}
       </div>
 
-      {/* Séparateur */}
-      <div className="w-full h-px bg-black/[0.06]" />
+      <h3 className="font-body text-xl font-semibold text-navy mb-1">{name}</h3>
+      <p className="font-body text-xs text-gold font-medium tracking-wide mb-4">{role}</p>
+      <p className="font-body text-sm text-muted leading-relaxed mb-5">{bio}</p>
 
-      {/* Biographie */}
-      <p className="font-body text-sm text-muted leading-relaxed">{bio}</p>
-    </Card>
+      {/* Citation personnelle */}
+      {quote && (
+        <blockquote className="border-l-2 border-gold/40 pl-4">
+          <p className="font-display italic text-[0.875rem] text-muted/80 leading-relaxed">
+            &ldquo;{quote}&rdquo;
+          </p>
+        </blockquote>
+      )}
+    </div>
   )
 }

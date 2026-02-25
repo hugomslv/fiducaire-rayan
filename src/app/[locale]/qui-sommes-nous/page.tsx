@@ -8,6 +8,7 @@ import { TeamCard } from '@/components/TeamCard'
 import { ContactBlock } from '@/components/ContactBlock'
 import { Footer } from '@/components/Footer'
 import { Icon } from '@/lib/icons'
+import { StatCounter } from '@/components/StatCounter'
 
 export async function generateMetadata({
   params,
@@ -98,12 +99,7 @@ export default async function QuiSommesNousPage({
         {/* Bande de stats — sans carte, sans ombre, sans fond */}
         <div className="mt-16 pt-10 border-t border-black/[0.07] grid grid-cols-4 divide-x divide-black/[0.07]">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center py-6">
-              <p className="font-display text-[2rem] sm:text-5xl font-semibold text-navy leading-none mb-2">
-                {stat.value}
-              </p>
-              <p className="font-body text-[10px] sm:text-xs text-muted tracking-wide">{stat.label}</p>
-            </div>
+            <StatCounter key={stat.label} value={stat.value} label={stat.label} />
           ))}
         </div>
       </Section>

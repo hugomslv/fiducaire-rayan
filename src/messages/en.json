@@ -69,17 +69,18 @@
         "shortDesc": "Bookkeeping, VAT returns and tax optimization.",
         "heroTitle1": "Accounting",
         "heroTitle2": "& Tax",
-        "heroIntro": "Entrust us with your accounting and focus on your core business. We ensure the compliance of your accounts and the optimization of your tax burden, with complete discretion.",
+        "heroIntro": "We manage your bookkeeping and optimize your tax position in full compliance with Swiss law.",
         "bullets": [
-          "Day-to-day bookkeeping",
-          "Annual financial statements and balance sheets",
-          "VAT, income tax and corporate tax filings"
+          "Day-to-day bookkeeping & annual closing",
+          "VAT & tax filings — corporate and personal",
+          "Tax advisory & optimization",
+          "Annual financial statements"
         ],
         "forWho": [
-          "SMEs and freelancers looking to outsource their accounting",
-          "Growing companies needing structured monitoring",
-          "Start-ups seeking to comply with Swiss legal requirements",
-          "Entrepreneurs wishing to optimize their tax burden"
+          "SMEs — Monthly monitoring, annual closing, VAT.",
+          "Freelancers — Simplified bookkeeping and tax optimization.",
+          "Start-ups — Accounting structure from day one.",
+          "Growing companies — Structured support and tax anticipation."
         ]
       },
       {
@@ -294,6 +295,8 @@
     "phoneLabel": "Phone",
     "mainOfficeLabel": "Head office",
     "hours": "Mon–Fri: 8:00–18:00",
+    "directContact": "Direct contact",
+    "responseDelay": "Response time",
     "country": "Switzerland",
     "form": {
       "overline": "Contact",

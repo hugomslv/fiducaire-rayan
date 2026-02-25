@@ -69,17 +69,18 @@
         "shortDesc": "Escrituração contabilística, declarações de IVA e otimização fiscal.",
         "heroTitle1": "Contabilidade",
         "heroTitle2": "& Fiscalidade",
-        "heroIntro": "Confie-nos a sua contabilidade e concentre-se no seu negócio principal. Velamos pela conformidade das suas contas e pela otimização da sua carga fiscal, com total discrição.",
+        "heroIntro": "Gerimos a sua contabilidade e optimizamos a sua situação fiscal em total conformidade com a lei suíça.",
         "bullets": [
-          "Escrituração contabilística corrente",
-          "Elaboração das contas anuais e balanços",
-          "Declarações de IVA, imposto sobre o rendimento e imposto sobre as sociedades"
+          "Escrituração corrente & encerramento anual",
+          "IVA & declarações fiscais — sociedades e pessoas singulares",
+          "Consultoria & otimização fiscal",
+          "Elaboração das contas anuais"
         ],
         "forWho": [
-          "PME e independentes que pretendem externalizar a sua contabilidade",
-          "Empresas em crescimento que necessitam de um acompanhamento estruturado",
-          "Start-ups que procuram cumprir os requisitos legais suíços",
-          "Empresários que desejam otimizar a sua carga fiscal"
+          "PMEs — Acompanhamento mensal, encerramento anual, IVA.",
+          "Independentes — Contabilidade simplificada e otimização fiscal.",
+          "Startups — Estrutura contabilística desde a criação.",
+          "Empresas em crescimento — Acompanhamento estruturado e antecipação fiscal."
         ]
       },
       {
@@ -294,6 +295,8 @@
     "phoneLabel": "Telefone",
     "mainOfficeLabel": "Sede principal",
     "hours": "Seg–Sex: 8h00–18h00",
+    "directContact": "Contacto direto",
+    "responseDelay": "Prazo de resposta",
     "country": "Suíça",
     "form": {
       "overline": "Contacte-nos",

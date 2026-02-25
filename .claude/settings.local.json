@@ -14,7 +14,8 @@
       "Bash(netstat:*)",
       "Bash(tasklist /FI \"PID eq 16412\" 2>&1 && tasklist /FI \"PID eq 12332\" 2>&1)",
       "Bash(cmd.exe:*)",
-      "Bash(powershell.exe:*)"
+      "Bash(powershell.exe:*)",
+      "Bash(echo no root images:*)"
     ]
   }
 }

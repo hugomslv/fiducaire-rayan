@@ -69,17 +69,18 @@
         "shortDesc": "Tenue des comptes, déclarations TVA et optimisation fiscale.",
         "heroTitle1": "Comptabilité",
         "heroTitle2": "& Fiscalité",
-        "heroIntro": "Confiez-nous votre comptabilité et concentrez-vous sur votre cœur de métier. Nous veillons à la conformité de vos comptes et à l'optimisation de votre charge fiscale, en toute discrétion.",
+        "heroIntro": "Nous tenons votre comptabilité et optimisons votre fiscalité en toute conformité avec le droit suisse.",
         "bullets": [
-          "Tenue de la comptabilité courante",
-          "Établissement des comptes annuels et bilans",
-          "Déclarations TVA, impôt sur le revenu, impôt sociétés"
+          "Comptabilité courante & bouclement annuel",
+          "TVA & déclarations fiscales — société et personne physique",
+          "Conseil & optimisation de la charge fiscale",
+          "Établissement des comptes annuels"
         ],
         "forWho": [
-          "PME et indépendants souhaitant externaliser leur comptabilité",
-          "Sociétés en croissance nécessitant un suivi structuré",
-          "Start-ups cherchant à se conformer aux exigences légales suisses",
-          "Entrepreneurs souhaitant optimiser leur charge fiscale"
+          "PME — Suivi mensuel, bouclement annuel, TVA.",
+          "Indépendants — Comptabilité simplifiée et optimisation fiscale.",
+          "Startups — Structuration comptable dès la création.",
+          "Sociétés en croissance — Accompagnement structuré et anticipation fiscale."
         ]
       },
       {
@@ -294,6 +295,8 @@
     "phoneLabel": "Téléphone",
     "mainOfficeLabel": "Siège principal",
     "hours": "Lun–Ven : 8h00–18h00",
+    "directContact": "Contact direct",
+    "responseDelay": "Délai de réponse",
     "country": "Suisse",
     "form": {
       "overline": "Contactez-nous",

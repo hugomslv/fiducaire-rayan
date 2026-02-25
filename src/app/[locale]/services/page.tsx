@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { getMessages, isValidLocale, defaultLocale, type Locale } from '@/lib/i18n'
 import { services, BG } from '@/lib/siteData'
 import { Section } from '@/components/Section'
 import { PremiumHeading, Accent } from '@/components/PremiumHeading'
-import { ScrollReveal } from '@/components/ScrollReveal'
 import { ContactBlock } from '@/components/ContactBlock'
 import { Footer } from '@/components/Footer'
 import { Icon } from '@/lib/icons'
@@ -43,21 +43,17 @@ export default async function ServicesPage({
     <>
       {/* ── Hero page ──────────────────────── */}
       <section className="relative bg-navy overflow-hidden pt-36 pb-20 sm:pt-48 sm:pb-24">
-        <div className="absolute inset-0 pointer-events-none opacity-[0.025]" aria-hidden="true">
-          <div
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
-              backgroundSize: '80px 80px',
-              width: '100%',
-              height: '100%',
-            }}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <Image
+            src="/images/hero-section-image.png"
+            alt=""
+            fill
+            className="object-cover object-right-bottom"
+            priority
           />
+          <div className="absolute inset-0 bg-navy/80" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-navy to-transparent" />
         </div>
-        <div
-          className="absolute -top-20 -left-20 w-80 h-80 rounded-full border border-gold/8 pointer-events-none"
-          aria-hidden="true"
-        />
         <div className="container-main relative z-10 text-center">
           <span className="section-label text-gold/70">{t.services.pageOverline}</span>
           <PremiumHeading as="h1" size="page" color="light" className="mt-2 mb-6">
@@ -73,54 +69,61 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* ── Grille 4 domaines ─────────────── */}
-      <Section bg="mineral" slant="right" slantFill={BG.navy}>
-        <ScrollReveal className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+      {/* ── Grille 4 domaines avec illustrations ── */}
+      <Section bg="cream" slant="right" slantFill={BG.navy}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           {services.map((s, i) => (
             <article
               key={s.id}
-              className="group bg-white rounded-2xl border border-black/[0.05] shadow-card p-8 sm:p-10 flex flex-col gap-6 hover:-translate-y-1 hover:shadow-premium transition-all duration-300"
+              className="group bg-white rounded-2xl border border-black/[0.05] shadow-card flex flex-col overflow-hidden hover:shadow-premium hover:-translate-y-0.5 transition-all duration-300"
             >
-              {/* En-tête */}
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gold/[0.08] text-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/[0.14]">
-                  <Icon name={s.icon} size={22} strokeWidth={1.5} />
-                </div>
-                <h2 className="font-body text-xl font-semibold text-ink leading-snug pt-1">
-                  {t.services.items[i].title}
-                </h2>
+              {/* Illustration */}
+              <div className="relative h-52 bg-primary-50/40 overflow-hidden">
+                <Image
+                  src={`/images/services/${s.id}.png`}
+                  alt={t.services.items[i].title}
+                  fill
+                  sizes="(max-width: 640px) 92vw, 45vw"
+                  className="object-contain p-6"
+                  priority={i < 2}
+                />
               </div>
 
-              {/* Séparateur */}
-              <div className="h-px bg-black/[0.06]" />
+              {/* Contenu */}
+              <div className="flex flex-col gap-4 p-7 flex-1">
+                {/* En-tête : icône + titre */}
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-gold/[0.08] text-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-gold/[0.14]">
+                    <Icon name={s.icon} size={18} strokeWidth={1.5} />
+                  </div>
+                  <h2 className="font-body text-lg font-semibold text-ink leading-snug">
+                    {t.services.items[i].title}
+                  </h2>
+                </div>
 
-              {/* Bullets */}
-              <ul className="flex flex-col gap-3">
-                {t.services.items[i].bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" aria-hidden="true" />
-                    <span className="font-body text-sm text-muted leading-relaxed">{bullet}</span>
-                  </li>
-                ))}
-              </ul>
+                {/* Résumé */}
+                <p className="font-body text-sm text-muted leading-relaxed">
+                  {t.services.items[i].shortDesc}
+                </p>
 
-              {/* CTA */}
-              <div className="mt-auto">
-                <Link
-                  href={`/${validLocale}/services/${s.id}`}
-                  className="inline-flex items-center gap-2 font-body text-sm font-semibold text-gold hover:gap-3 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
-                >
-                  {t.services.discoverCta}
-                  <Icon name="arrow" size={14} strokeWidth={2} />
-                </Link>
+                {/* CTA */}
+                <div className="mt-auto pt-2 border-t border-black/[0.05]">
+                  <Link
+                    href={`/${validLocale}/services/${s.id}`}
+                    className="inline-flex items-center gap-2 font-body text-sm font-semibold text-gold hover:gap-3 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
+                  >
+                    {t.services.discoverCta}
+                    <Icon name="arrow" size={14} strokeWidth={2} />
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
-        </ScrollReveal>
+        </div>
       </Section>
 
       {/* ── Promesse ─────────────────────────── */}
-      <Section bg="stone" slant="left" slantFill={BG.mineral}>
+      <Section bg="stone" slant="left" slantFill={BG.cream}>
         <div className="max-w-3xl mx-auto text-center">
           <span className="section-label">{t.services.promiseOverline}</span>
           <h2 className="section-title">{t.services.promiseTitle}</h2>
